@@ -1,4 +1,6 @@
-if [ $UID -eq 0 ]; then NCOLOR="red"; else NCOLOR="yellow"; fi
+NCOLOR="yellow"
+[ $UID -eq 0 ] && NCOLOR="green"
+[ -e $HOME/.server ] && NCOLOR="red"
 
 PROMPT='%{$fg[$NCOLOR]%}%c ➤ %{$reset_color%}'
 RPROMPT='%{$fg[$NCOLOR]%}%p $(git_prompt_info)%{$reset_color%}'
