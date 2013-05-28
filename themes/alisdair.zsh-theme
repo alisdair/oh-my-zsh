@@ -2,8 +2,8 @@ NCOLOR="yellow"
 [ $UID -eq 0 ] && NCOLOR="green"
 [ -e $HOME/.server ] && NCOLOR="red"
 
-PROMPT='%{$fg[$NCOLOR]%}%c ➤ %{$reset_color%}'
-RPROMPT='%{$fg[$NCOLOR]%}%p $(git_prompt_info)%{$reset_color%}'
+PROMPT='%{$fg[$NCOLOR]%}%c $ %{$reset_color%}'
+RPROMPT='%{$fg[blue]%}%p $(rbenv_prompt_info) $(git_prompt_info)%{$reset_color%}'
 
 ZSH_THEME_GIT_PROMPT_PREFIX="git:"
 ZSH_THEME_GIT_PROMPT_SUFFIX=""
